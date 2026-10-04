@@ -1,0 +1,6 @@
+name: SweepAttack
+main: id.rivai.sweep.SweepPlugin
+version: 1.0.0
+api: ["1.0.0"]
+author: Rivai
+description: Sweep attack ala Minecraft Java untuk pedang
