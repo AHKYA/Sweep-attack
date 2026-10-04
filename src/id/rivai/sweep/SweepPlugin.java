@@ -30,7 +30,9 @@ public class SweepPlugin extends PluginBase implements Listener {
         if (sweeping) return;
         if (e.getCause() != DamageCause.ENTITY_ATTACK) return;
         if (!(e.getDamager() instanceof Player player)) return;
-        if (!player.getInventory().getItemInHand().isSword()) return;
+        var inv = player.getInventory();
+var item = inv.getItem(inv.getHeldItemIndex());
+if (item == null || !item.getId().endsWith("_sword")) return;
 
         Entity target = e.getEntity();
         sweeping = true;
